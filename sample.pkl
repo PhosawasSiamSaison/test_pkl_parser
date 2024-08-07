@@ -1,0 +1,9 @@
+// From:
+// https://pkl-lang.org/main/current/language-tutorial/01_basic_config.html
+def calculate(a, b):
+  return a + b
+
+data {
+    "name": "Alice",
+    "function": calculate
+}
