@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/test_pkl_parser
+    file_exists_behavior: OVERWRITE
+permissions:
+  - object: /var/www/test_pkl_parser
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+    mode: 775
+hooks:
+  AfterInstall:
+    - location: scripts/dependencies_install.sh
+      runas: ubuntu
+    - location: scripts/set_environment_variables.sh
+      runas: ubuntu
