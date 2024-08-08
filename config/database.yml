@@ -52,5 +52,5 @@ test:
 production:
   <<: *default
   database: test_pkl_parser_production
-  username: test_pkl_parser
-  password: <%= ENV["TEST_PKL_PARSER_DATABASE_PASSWORD"] %>
+  username: root
+  password: admin
